@@ -11,7 +11,7 @@
 
   - name: host code
     git: 
-      repo: https://github.com/adaobi06/ecomm-3.git
+      repo: https://github.com/adaobi06/food3.git
       dest: /var/www/html
 
 ...
