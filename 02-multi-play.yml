@@ -1,4 +1,4 @@
---
+---
 - name: Update host1 servers
   hosts: host1
 
