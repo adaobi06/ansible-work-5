@@ -1,9 +1,13 @@
 ---
-- name: Ensure /var/www/html exists
-  file:
-    path: /var/www/html
-    state: directory
-    owner: www-data
-    group: www-data
-    mode: '0755'
-...
+- name: Create directory
+  hosts: host2
+  become: true
+
+  tasks:
+    - name: Ensure /var/www/html exists
+      file:
+        path: /var/www/html
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
