@@ -1,6 +1,6 @@
 ---
 - name: static page
-  hosts: host2
+  hosts: host1
   become: yes
 
   tasks:
