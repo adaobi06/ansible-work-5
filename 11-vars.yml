@@ -1,6 +1,6 @@
 ---
 - name: variable demo
-  hosts: host2
+  hosts: host1
   become: yes
   vars: 
     myusernmae: cleopatra
@@ -8,6 +8,6 @@
   tasks:
   - name: update static page
     copy:
-      src: static.html
+      src: dynamic.j2
       dest: /var/www/html/static.html   
 ...
