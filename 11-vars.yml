@@ -3,7 +3,7 @@
   hosts: host2
   become: yes
   vars: 
-  myusernmae: cleopatra
+    myusernmae: cleopatra
 
   tasks:
   - name: update static page
