@@ -1,12 +1,13 @@
 ---
-- name: static page
+- name: variable demo
   hosts: host2
   become: yes
+  vars: 
+  myusernmae: cleopatra
 
   tasks:
   - name: update static page
     copy:
       src: static.html
-      dest: /var/www/html/static.html
-      
+      dest: /var/www/html/static.html   
 ...
