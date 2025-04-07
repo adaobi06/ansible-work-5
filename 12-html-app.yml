@@ -1,16 +1,9 @@
 ---
 - name: Deploy web app
-  hosts: host2
+  hosts: host1
   become: yes
 
-  tasks:
-  - name: install git
-    yum:
-      name: git
-      state: present
-
-  - name: host code
-    git: 
-      repo: https://github.com/adaobi06/ecomm-3.git
-      dest: /var/www/html
+  roles: 
+   -apache
+   -html
 ...
