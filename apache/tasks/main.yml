@@ -1,4 +1,4 @@
 ---
 # tasks file for apache
--import_tasks: insatll.yml
--import_tasks: config.yml
+- import_tasks: insatll.yml
+- import_tasks: config.yml
