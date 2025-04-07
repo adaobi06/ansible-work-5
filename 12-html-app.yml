@@ -1,9 +1,16 @@
-<html>
-    <body>
-        <center>
-        <host1>the server Operating system : </host1>
-         <br>
-         <host1>the server Hostname : </host1>
-    </center>
-    </body>
-</html> 
+---
+- name: Deploy web app
+  hosts: host2
+  become: yes
+
+  tasks:
+  - name: install git
+    yum:
+      name: git
+      state: present
+
+  - name: host code
+    git: 
+      repo: https://github.com/adaobi06/ecomm-3.git
+      dest: /var/www/html
+...
